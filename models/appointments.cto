@@ -1,0 +1,23 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace composers.appointments
+import composers.participants.Patient
+import composers.participants.Doctor
+
+asset appointment identified by id{
+	o String id
+	o DateTime time
+	o DateTime realTime
+}
+
+concept Resources{
+  -->Doctor doctor
+}
+
+transaction addAppointment{
+	o DateTime time 
+	o DateTime realTime
+	--> Patient patient
+}

@@ -1,0 +1,30 @@
+/**
+ * All participants in the system
+ Person is a participant
+ * Doctors must also be reg.
+ * Patient and Doc. extensions of a Person
+ */
+
+namespace composers.participants
+
+abstract participant Person identified by ID{
+  o String ID
+  o String title
+  o String firstname
+  o String lastname
+}
+participant Administrator extends Person{
+  /**
+  Just for monitoring purpose
+ */
+}
+
+participant Doctor extends Person{
+  o String department
+  o String salary optional
+}
+
+participant Patient extends Person{
+  o DateTime lastvisit
+  o Double balanceDue optional
+}

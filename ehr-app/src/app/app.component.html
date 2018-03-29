@@ -1,0 +1,64 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <p class="network-name">ehr-network@0.0.1.bna</p>
+        <p class="navbar-brand">ehr-app</p>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
+            <ul class="dropdown-menu scrollable-menu">
+              
+              <li><a [routerLink]="['/appointment']">appointment</a></li>
+              
+              <li><a [routerLink]="['/PatientInfo']">PatientInfo</a></li>
+              
+              <li><a [routerLink]="['/Bill']">Bill</a></li>
+              
+              <li><a [routerLink]="['/HospitalSupplies']">HospitalSupplies</a></li>
+              
+              <li><a [routerLink]="['/HospitalMoneyPool']">HospitalMoneyPool</a></li>
+              
+              <li><a [routerLink]="['/SampleAsset']">SampleAsset</a></li>
+              
+            </ul>
+        </li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown">Participants</a>
+          <ul class="dropdown-menu scrollable-menu">
+            
+            <li><a [routerLink]="['/User']">User</a></li>
+            
+            <li><a [routerLink]="['/Administrator']">Administrator</a></li>
+            
+            <li><a [routerLink]="['/Doctor']">Doctor</a></li>
+            
+            <li><a [routerLink]="['/Patient']">Patient</a></li>
+            
+          </ul>
+      </li>
+      <li class="dropdown active">
+        <a class="dropdown-toggle" data-toggle="dropdown">Transactions</a>
+        <ul class="dropdown-menu scrollable-menu">
+          
+          <li><a [routerLink]="['/addAppointment']">addAppointment</a></li>
+          
+          <li><a [routerLink]="['/updateMedication']">updateMedication</a></li>
+          
+          <li><a [routerLink]="['/updatePastVisits']">updatePastVisits</a></li>
+          
+          <li><a [routerLink]="['/updateContact']">updateContact</a></li>
+          
+          <li><a [routerLink]="['/SendBill']">SendBill</a></li>
+          
+          <li><a [routerLink]="['/PayBill']">PayBill</a></li>
+          
+          <li><a [routerLink]="['/ChangeAssetValue']">ChangeAssetValue</a></li>
+          
+        </ul>
+    </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>

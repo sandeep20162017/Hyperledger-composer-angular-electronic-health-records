@@ -1,0 +1,51 @@
+/**
+ * Write your model definitions here
+ */
+
+
+/**
+ * Write your model definitions here
+ */
+
+
+namespace composers.finance
+import composers.participants.Patient
+
+
+concept Expenses {//hospital expenses
+  o Double supplies
+  o Double staff
+  o Double medications
+}
+
+asset Bill identified by billID {//bill of patient
+  o String billID
+  o String patientID
+  o String moneyID
+  o Double amount
+  o Boolean paid
+}
+
+asset HospitalSupplies identified by supplyID {
+  o String supplyID
+  o String drugs
+}
+
+asset HospitalMoneyPool identified by moneyID {
+  o String moneyID
+  o Double moneypool
+}
+
+enum SupplyState {
+  o full
+  o low
+  o empty
+}
+
+transaction SendBill {
+  o Bill bill
+}
+
+transaction PayBill {
+  o Bill bill
+}
