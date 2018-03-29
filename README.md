@@ -64,3 +64,4 @@ check business cards
 composer card list
 
 Make sure /etc/hosts has ip of VPS
+# Hyperledger-composer-angular-electronic-health-records-v1
